@@ -4,16 +4,32 @@ import Home from '../views/Home.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    component:() => import(/* webpackChunkName: "about" */ '../views/Home/home.vue'),
+
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: "/home",
+    component:() => import(/* webpackChunkName: "about" */ '../views/Home/home.vue'),
+    meta:{
+      title: 'Gawsdata'
+    }
+  },
+  {
+    path: "/about",
+    component:() => import(/* webpackChunkName: "about" */ '../views/About/about.vue'),
+
+  },
+  {
+    path: "/introduce",
+    component:() => import(/* webpackChunkName: "about" */ '../views/Introduce/introduce.vue'),
+  },
+  {
+    path: "/dataset",
+    component:() => import(/* webpackChunkName: "about" */ '../views/Dataset/dataset.vue'),
+  },
+  {
+    path: "/help",
+    component:() => import(/* webpackChunkName: "about" */ '../views/Help/help.vue')
   }
 ]
 
