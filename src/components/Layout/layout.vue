@@ -1,46 +1,33 @@
 <template>
-  <el-container>
-<!--    header 一直设计不好 无法自适应-->
-<!--    <el-header >-->
-<!--    </el-header>-->
-    <navbar />
-    <el-main >
-      <div>
-        <router-view></router-view>
-      </div>
-    </el-main>
-    <el-footer>
-      <fote />
-    </el-footer>
-  </el-container>
+  <navbar></navbar>
+  <router-view :key="$route.fullPath"></router-view>
+  <fote/>
 </template>
 
 <script>
 import { reactive, toRefs } from 'vue'
 import Navbar from "@/components/Navbar";
 import Fote from "@/components/Fote/fote";
+// import Fote from "@/components/Fote/fote";
 
 export default {
 name: "layout",
-  components: { Fote, Navbar},
+  components: {Fote,  Navbar},
   setup() {
 const state = reactive({
 count: 0,
 })
 return {
     ...toRefs(state),
+    test: require('../../assets/hero.svg')
 }
 }
 }
 </script>
 
 <style scoped>
-.el-header, .el-footer {
-  background-color: #ffffff;
-  color: #333;
-  text-align: center;
-  margin: 0px 0px;
-  padding: 0px 0px;
-}
+/*.carousel-caption p,h5{*/
+/*  !*color: #001528;*!*/
+/*}*/
 
 </style>
