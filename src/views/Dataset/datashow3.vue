@@ -49,8 +49,12 @@
         <button type="button" class="btn btn-outline-primary" @click="isS=1">LD expansion</button>
       </div>
     </div>
-    <datadetail :list="list" v-if="isS===0"></datadetail>
-    <dataimg :list="imglist" v-if="isS===1"></dataimg>
+    <div class="table-responsive">
+      <datadetail :list="list" v-if="isS===0"></datadetail>
+    </div>
+    <div class="table-responsive">
+      <dataimg :list="imglist" v-if="isS===1"></dataimg>
+    </div>
     <div class="row">
       <div class="text-lg-end"><button type="button" class="btn btn-outline-primary " @click="download">Download all annotation</button></div>
     </div>

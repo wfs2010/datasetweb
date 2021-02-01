@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import {createRouter, createWebHashHistory, createWebHistory} from 'vue-router'
 
 // : Array<RouteRecordRaw>
 const routes = [
@@ -25,10 +25,10 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHashHistory(process.env.BASE_URL),
   routes,
 })
-router.afterEach(() => {
+router.afterEach((to, from, next) => {
     window.scrollTo(0, 0);
 })
 export default router

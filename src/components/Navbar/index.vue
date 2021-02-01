@@ -24,12 +24,12 @@
                 <li class="nav-item">
                   <a class="nav-link" ><router-link to="/dataset" >Dataset</router-link></a>
                 </li>
-<!--                <li class="nav-item">-->
-<!--                  <a class="nav-link" ><router-link to="/about" >Archive</router-link></a>-->
-<!--                </li>-->
                 <li class="nav-item">
-                  <a class="nav-link" href="/login"><i class="bi bi-person-circle"></i> Login</a>
+                  <a class="nav-link" ><router-link to="/login" >Login</router-link></a>
                 </li>
+<!--                <li class="nav-item">-->
+<!--                  <a class="nav-link" href="/login"><i class="bi bi-person-circle"></i> Login</a>-->
+<!--                </li>-->
                 <li class="nav-item dispp2">
                   <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
